@@ -5,7 +5,7 @@
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="7">
-              <h1 class="font-weight-light display-2">Sobre</h1>
+              <h1 class="font-weight-light display-2">NOSOTROS</h1>
               <h1 class="font-weight-light display-1 mb-3">
                 Lorem ipsum dolor!
               </h1>
@@ -17,9 +17,9 @@
                     class="mr-4"
                   />
                   <p class="text-justify">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    En ALLIN CONSULTORES S.A.C., somos líderes en consultoría empresarial especializada en el sector minero. Con una sólida trayectoria y 
+                    un equipo altamente calificado, brindamos soluciones estratégicas que impulsan el desarrollo eficiente y sostenible 
+                    de las operaciones mineras.
                   </p>
                 </v-col>
                 <v-col cols="12" class="d-flex align-center">

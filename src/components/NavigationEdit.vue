@@ -67,6 +67,9 @@
         <v-btn text @click="$vuetify.goTo('#download')">
           <span class="mr-2">Servicios</span>
         </v-btn>
+        <v-btn text @click="$vuetify.goTo('#download')">
+          <span class="mr-2">Contactanos</span>
+        </v-btn>
 
         <v-btn class="yellow darken-3" dark style="margin-right: 10px;" @click="goToLogin">
             LOGIN
@@ -93,11 +96,10 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
-      ["mdi-email-outline", "Contatos", "#contact"],
+      ["mdi-home-outline", "Inicio", "#hero"],
+      ["mdi-information-outline", "Nosotros", "#features"],
+      ["mdi-wallet-travel", "Servicios", "#download"],
+      ["mdi-email-outline", "Contactanos", "#contact"],
     ],
   }),
   props: {

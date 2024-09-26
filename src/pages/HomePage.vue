@@ -23,8 +23,8 @@
             </v-btn>
         </v-scale-transition>
         <foote />
-        </v-app>
-    </template>
+     </v-app>
+</template>
     
     <style scoped>
     .v-main {
