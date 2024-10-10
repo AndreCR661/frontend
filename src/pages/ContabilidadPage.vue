@@ -2,7 +2,7 @@
   <v-app>
   <Head :color="color" :flat="flat" />
   <div class="contabilidad">
-    <h2>Bouchers de Contabilidad</h2>
+    <h2>Voucher de Contabilidad</h2>
 
     <!-- Barra de búsqueda -->
     <div class="busqueda">
