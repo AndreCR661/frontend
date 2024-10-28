@@ -1,6 +1,6 @@
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="secondary white--text text-center">
+  <v-footer padless class="footer-dark">
+    <v-card flat tile class="white--text text-center">
       <v-card-text>
         <v-btn
           v-for="(icon, i) in icons"
@@ -29,8 +29,13 @@
 </template>
 
 <style scoped>
+.footer-dark {
+  background-color: #1b2e55 !important; /* Asegura el color negro */
+  color: white;
+}
 .v-card {
   width: 100%;
+  background-color: transparent !important; /* Mantiene el fondo del card transparente */
 }
 </style>
 
@@ -38,22 +43,10 @@
 export default {
   data: () => ({
     icons: [
-      {
-        text: "mdi-facebook",
-        link: "",
-      },
-      {
-        text: "mdi-twitter",
-        link: "",
-      },
-      {
-        text: "mdi-linkedin",
-        link: "",
-      },
-      {
-        text: "mdi-instagram",
-        link: "https://instagram.com/joabson_arley/",
-      },
+      { text: "mdi-facebook", link: "" },
+      { text: "mdi-twitter", link: "" },
+      { text: "mdi-linkedin", link: "" },
+      { text: "mdi-instagram", link: "" },
     ],
   }),
 };

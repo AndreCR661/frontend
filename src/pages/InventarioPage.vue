@@ -84,8 +84,8 @@
   </template>
   
   <script>
-  import Head from "@/components/NavigationEdit.vue";
-  import Foot from "@/components/FooterEdit.vue";
+  import Head from "@/components/global/HeaderNav.vue";
+  import Foot from "@/components/global/FooterEdit.vue";
   export default {
     components: {
       Head,

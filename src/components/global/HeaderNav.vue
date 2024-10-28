@@ -10,7 +10,7 @@
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <img src="@/assets/img/logo copy.png" alt="Logo" />
+            <img src="@/assets/icons/logo copy.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="title">ALLIN</v-list-item-title>
@@ -49,7 +49,7 @@
       :class="{ expand: flat }"
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo copy.png" max-width="120px" />
+        <v-img src="@/assets/icons/logo copy.png" max-width="120px" />
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon

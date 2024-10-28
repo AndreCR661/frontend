@@ -27,7 +27,7 @@
         </v-col>
       </v-row>
       <div class="svg-border-waves text-white">
-        <v-img src="@/assets/img/borderWaves.svg" />
+        <v-img src="@/assets/svg/borderWaves.svg" />
       </div>
     </v-parallax>
     <v-container fluid id="features" class="mt-2">
@@ -75,7 +75,7 @@
       
     </v-dialog>
     <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
+      <img src="~@/assets/svg/wave2.svg" />
     </div>
   </section>
 </template>
@@ -88,17 +88,17 @@ export default {
       videoId: "i8IvvHJssWE",
       features: [
         {
-          img: require("@/assets/img/balance.png"),
+          img: require("@/assets/icons/balance.png"),
           title: "Legal",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          img: require("@/assets/img/contable.png"),
+          img: require("@/assets/icons/contable.png"),
           title: "Contable",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          img: require("@/assets/img/trato.png"),
+          img: require("@/assets/icons/trato.png"),
           title: "Explotacion",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },

@@ -37,12 +37,12 @@
     
     <script>
     
-    import navigation from "@/components/NavigationEdit.vue";
-    import foote from "@/components/FooterEdit.vue";
-    import home from "@/components/HomeSection.vue";
-    import TradingViewWidgets from "@/components/TradingViewWidgets.vue";
-    import about from "@/components/AboutSection";
-    import contact from "@/components/ContactSection.vue";
+    import navigation from "@/components/global/HeaderNav.vue";
+    import foote from "@/components/global/FooterEdit.vue";
+    import home from "@/components/main/HomeSection.vue";
+    import TradingViewWidgets from "@/components/main/TradingViewWidgets.vue";
+    import about from "@/components/main/AboutSection";
+    import contact from "@/components/main/ContactSection.vue";
     
     export default {
         name: "HomePage",
