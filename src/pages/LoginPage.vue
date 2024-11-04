@@ -39,24 +39,31 @@
     export default {
         name: 'LoginPage',
         data() {
-        return {
-            email: '',
-            password: '',
-            showPassword: false
-        };
+            return {
+                email: '',
+                password: '',
+                showPassword: false
+            };
         },
         methods: {
-        login() {
-            // Aquí agregar la lógica para iniciar sesión
-            console.log('Iniciar sesión con:', this.email, this.password);
-        },
-        goToRegister() {
-            // Aquí agregar la lógica para navegar a la página de registro
-            console.log('Navegar a la página de registro');
+            login() {
+                // Aquí simulamos diferentes tipos de usuario
+                if (this.email === 'admin' && this.password === 'admin') {
+                    localStorage.setItem('user', JSON.stringify({ role: 'admin' }));
+                    this.$router.push('/admin');
+                } else if (this.email === 'inventario' && this.password === 'inventario') {
+                    localStorage.setItem('user', JSON.stringify({ role: 'inventario' }));
+                    this.$router.push('/inventario');
+                } else if (this.email === 'contabilidad' && this.password === 'contabilidad') {
+                    localStorage.setItem('user', JSON.stringify({ role: 'contabilidad' }));
+                    this.$router.push('/contabilidad');
+                } else {
+                    alert('Credenciales incorrectas');
+                }
+            }
         }
-        }
-    }
-    </script>
+    };
+    </script>    
     
     <style scoped>
     .fill-height {

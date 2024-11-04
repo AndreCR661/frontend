@@ -3,8 +3,10 @@
         <navigation :color="color" :flat="flat" />
         <v-main class="pt-0">
             <home />
-            <about />
+            <carrusel/>
+            
             <trading-view-widgets />
+            <about />
             <contact />
         </v-main>
         <v-scale-transition>
@@ -43,6 +45,7 @@
     import TradingViewWidgets from "@/components/main/TradingViewWidgets.vue";
     import about from "@/components/main/AboutSection";
     import contact from "@/components/main/ContactSection.vue";
+    import carrusel from "@/components/main/CarruselSection.vue";
     
     export default {
         name: "HomePage",
@@ -54,6 +57,7 @@
             about,
             contact,
             TradingViewWidgets,
+            carrusel
         },
     
         data: () => ({

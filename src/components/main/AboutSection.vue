@@ -14,16 +14,17 @@
   </section>
 </template>
 
+
 <style scoped>
 .about-section {
   position: relative;
   background-image: url('@/assets/img/carrusel1.jpg'); /* Ruta de tu imagen */
   background-size: cover;
-  background-position: center; /* Ajuste para mostrar más de la parte inferior */
- 
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4rem; /* Ajuste para evitar que el contenido toque el título */
 }
 
 .about-section::before {
@@ -37,21 +38,11 @@
   z-index: 1;
 }
 
-.about-overlay {
-  background-color:rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 800px; /* Limita el ancho del contenido */
-  color: white;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  z-index: 2;
-}
-
 .about-title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
   position: absolute;
-  top: 3rem; /* Ajusta según la distancia que quieras del borde superior */
+  top: 1rem; /* Ajusta la distancia desde el borde superior */
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.5rem;
@@ -59,11 +50,24 @@
   font-weight: bold;
   text-align: center;
   z-index: 2; /* Asegura que esté encima de la capa de fondo */
+  margin: 0; /* Elimina cualquier margen que agregue espacio innecesario */
+}
+
+.about-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px;
+  color: white;
+  margin-top: 3rem; /* Ajusta el margen superior para separar del título */
+  z-index: 2;
 }
 
 .about-content p {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 
 </style>
