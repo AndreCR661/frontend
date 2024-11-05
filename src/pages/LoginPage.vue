@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-container class="fill-height d-flex justify-center align-center" fluid>
+        <v-container class="fill-height d-flex justify-center align-center login-background" fluid>
             <v-card class="pa-5" max-width="400">
             <v-card-title class="text-center">
                 <span class="headline">Iniciar Sesión</span>
@@ -66,6 +66,12 @@
     </script>    
     
     <style scoped>
+    .login-background {
+    background-image: url('~@/assets/img/bgMain.png'); /* Cambia el path de la imagen según tu estructura de archivos */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    }
     .fill-height {
         min-height: 100vh;
     }

@@ -15,13 +15,13 @@ const routes = [
         path: '/inventario',
         name: 'Inventario',
         component: IPage,
-        meta: { requiresAuth: true, role: 'inventory' } // Protegido por rol
+        meta: { requiresAuth: true, role: 'inventario' } // Protegido por rol
     },
     {
         path: '/contabilidad',
         name: 'Contabilidad',
         component: CPage,
-        meta: { requiresAuth: true, role: 'accounting' } // Protegido por rol
+        meta: { requiresAuth: true, role: 'contabilidad' } // Protegido por rol
     },
     {
         path: '/admin',

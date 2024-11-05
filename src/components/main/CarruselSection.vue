@@ -72,6 +72,12 @@ export default {
           title: "ÁREA CONTABLE",
           subtitle: "Nuestro equipo de contadores especializados asegura un control exhaustivo de tus finanzas, garantizando que cumplas con todas las normativas fiscales y tributarias.",
           link: "/"
+        },
+        {
+          img: require('@/assets/carrusel/carrusel1.jpg'),
+          title: "RECONSTRUCCIÓN CONTABLE",
+          subtitle: "Nuestro equipo de contadores especializados asegura un control exhaustivo de tus finanzas, garantizado que cumplas con todas las normativas fiscales y tributarias.",
+          link: "/"
         }
         // Añade más slides si es necesario
       ]
