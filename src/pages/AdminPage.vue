@@ -1,143 +1,97 @@
 <template>
-    <v-app>
-      <!-- Header que siempre estará arriba -->
-      <Head :color="color" :flat="flat" />
-  
-      <!-- Contenido principal con botones -->
-      <div class="admin-content">
-        <div class="admin-grid">
-          <button class="btn-admin" @click="irAInventario">Reporte Inventario</button>
-          <button class="btn-admin" @click="irAContabilidad">Reporte Contabilidad</button>
-          <button class="btn-admin" @click="irAUsuarios">Gestión de Usuarios</button>
-          <button class="btn-admin" @click="irAProveedores">Proveedores/Proyectos</button>
-        </div>
+  <v-app>
+    <!-- Header -->
+    <Head :color="color" :flat="flat" />
+
+    <!-- Contenido principal de la página de administración -->
+    <v-container class="admin-container">
+      <h2>Panel de Administración</h2>
+
+      <!-- Botones para acceder a las distintas secciones -->
+      <div class="admin-grid">
+        <v-btn class="btn-admin" color="primary" @click="ReporteInventario">
+          Reporte Inventario
+        </v-btn>
+        <v-btn class="btn-admin" color="primary" @click="ReporteContabilidad">
+          Reporte Contabilidad
+        </v-btn>
+        <v-btn class="btn-admin" color="primary" @click="GestionUsuarios">
+          Gestión de Usuarios
+        </v-btn>
+        <v-btn class="btn-admin" color="primary" @click="GestionProveedores">
+          Proveedores/Proyectos
+        </v-btn>
       </div>
-      <v-scale-transition>
-            <v-btn
-            fab
-            v-show="fab"
-            v-scroll="onScroll"
-            dark
-            fixed
-            bottom
-            right
-            color="secondary"
-            @click="toTop"
-            >
-            <v-icon>mdi-arrow-up</v-icon>
-            </v-btn>
-        </v-scale-transition>
-      <!-- Footer que siempre estará al fondo de la página -->
-        <Foot/>
-    </v-app>
-  </template>
-  
-  <script>
-  import Head from "@/components/global/HeaderNav.vue";
-  import Foot from "@/components/global/FooterEdit.vue";
-  
-  export default {
-    components: {
-      Head,
-      Foot,
+    </v-container>
+
+    <!-- Footer -->
+    <Foot />
+  </v-app>
+</template>
+
+<script>
+import Head from "@/components/global/HeaderNav.vue";
+import Foot from "@/components/global/FooterEdit.vue";
+
+export default {
+  components: {
+    Head,
+    Foot
+  },
+  data() {
+    return {
+      color: '#1d2e55',
+      flat: false
+    };
+  },
+  methods: {
+    ReporteInventario() {
+      // Navegar a la página de Reporte de Inventario
+      this.$router.push({ name: 'Inventario' });
     },
-    data: () => ({
-        fab: null,
-        color: "",
-        flat: null,
-    }),
-    watch: {
-    fab(value) {
-        if (value) {
-            this.color = "secondary";
-            this.flat = false;
-        } else {
-            this.color = "transparent";
-            this.flat = true;
-        }
+    ReporteContabilidad() {
+      // Navegar a la página de Reporte de Contabilidad
+      this.$router.push({ name: 'Contabilidad' });
     },
+    GestionUsuarios() {
+      // Navegar a la página de Gestión de Usuarios
+      this.$router.push({ name: 'UserManagement' });
     },
-    created() {
-    const top = window.pageYOffset || 0;
-    if (top <= 60) {
-        this.color = "transparent";
-        this.flat = true;
+    GestionProveedores() {
+      // Navegar a la página de Proveedores/Proyectos
+      alert('Funcionalidad Proveedores/Proyectos no implementada aún');
     }
-    },
-    methods: {
-      irAInventario() {
-        // Lógica para ir a Inventario
-      },
-      irAContabilidad() {
-        // Lógica para ir a Contabilidad
-      },
-      irAUsuarios() {
-        // Lógica para ir a Gestión de Usuarios
-      },
-      irAProveedores() {
-        // Lógica para ir a Proveedores/Proyectos
-      },
-      onScroll(e) {
-            if (typeof window === "undefined") return;
-            const top = window.pageYOffset || e.target.scrollTop || 0;
-            this.fab = top > 60;
-        },
-      toTop() {
-            this.$vuetify.goTo(0);
-      },
-    }
-  };
-  </script>
-  
-  <style scoped>
-  /* Estilos del contenedor general */
-  .admin-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el footer esté al fondo */
   }
-  
-  /* Contenido principal que crece */
-  .admin-content {
-    background-image: url("~@/assets/img/bgMain.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Estilo de la cuadrícula para los botones */
-  .admin-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    grid-template-rows: repeat(2, 1fr); /* Dos filas */
-    gap: 20px;
-    justify-items: center;
-    width: 80%; /* Ajusta el ancho de la cuadrícula */
-  }
-  
-  .btn-admin {
-    background-color: #fca311;
-    color: white;
-    border: none;
-    padding: 40px 80px; /* Aumenta el tamaño de los botones */
-    font-size: 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .btn-admin:hover {
-    background-color: #ffb703;
-  }
-  
-  </style>
-  
+};
+</script>
+
+<style scoped>
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.btn-admin {
+  padding: 20px;
+  font-size: 18px;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-admin:hover {
+  background-color: #394a75;
+}
+</style>

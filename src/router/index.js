@@ -5,6 +5,7 @@ import LoginPage from '@/pages/LoginPage.vue';
 import IPage from '@/pages/InventarioPage.vue';
 import CPage from '@/pages/ContabilidadPage.vue';
 import AdminPage from '@/pages/AdminPage.vue';
+import UserManagement from '@/pages/vistas/GestionUsuarios.vue';
 
 Vue.use(Router);
 
@@ -15,19 +16,25 @@ const routes = [
         path: '/inventario',
         name: 'Inventario',
         component: IPage,
-        meta: { requiresAuth: true, role: 'inventario' } // Protegido por rol
+        meta: { requiresAuth: true, role: 'inventario' }
     },
     {
         path: '/contabilidad',
         name: 'Contabilidad',
         component: CPage,
-        meta: { requiresAuth: true, role: 'contabilidad' } // Protegido por rol
+        meta: { requiresAuth: true, role: 'contabilidad' }
     },
     {
         path: '/admin',
         name: 'Admin',
         component: AdminPage,
-        meta: { requiresAuth: true, role: 'admin' } // Protegido por rol
+        meta: { requiresAuth: true, role: 'admin' }
+    },
+    {
+        path: '/gestion-usuarios',
+        name: 'UserManagement',
+        component: UserManagement,
+        meta: { requiresAuth: true, role: 'admin' } 
     },
     { path: '*', redirect: '/' }
 ];
@@ -37,16 +44,15 @@ const router = new Router({
   routes
 });
 
-// Añadimos un guard para proteger las rutas
 router.beforeEach((to, from, next) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
     const requiredRole = to.meta.role;
 
     if (requiresAuth && (!user || user.role !== requiredRole)) {
-        next('/login'); // Si no está autenticado o no tiene el rol correcto, redirige a login
+        next('/login'); 
     } else {
-        next(); // Permite el acceso si tiene el rol adecuado o no necesita autenticación
+        next(); 
     }
 });
 
