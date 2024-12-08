@@ -2,10 +2,8 @@
     <v-app>
         <navigation :color="color" :flat="flat" />
         <v-main class="pt-0">
-            <home />
+            <home/>
             <carrusel/>
-            
-            <trading-view-widgets />
             <about />
             <contact />
         </v-main>
@@ -42,7 +40,6 @@
     import navigation from "@/components/global/HeaderNav.vue";
     import foote from "@/components/global/FooterEdit.vue";
     import home from "@/components/main/HomeSection.vue";
-    import TradingViewWidgets from "@/components/main/TradingViewWidgets.vue";
     import about from "@/components/main/AboutSection";
     import contact from "@/components/main/ContactSection.vue";
     import carrusel from "@/components/main/CarruselSection.vue";
@@ -56,7 +53,6 @@
             home,
             about,
             contact,
-            TradingViewWidgets,
             carrusel
         },
     

@@ -47,11 +47,11 @@ export default {
   methods: {
     ReporteInventario() {
       // Navegar a la página de Reporte de Inventario
-      this.$router.push({ name: 'Inventario' });
+      
     },
     ReporteContabilidad() {
       // Navegar a la página de Reporte de Contabilidad
-      this.$router.push({ name: 'Contabilidad' });
+      
     },
     GestionUsuarios() {
       // Navegar a la página de Gestión de Usuarios
