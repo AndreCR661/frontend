@@ -59,7 +59,7 @@ export default {
     },
     GestionProveedores() {
       // Navegar a la página de Proveedores/Proyectos
-      alert('Funcionalidad Proveedores/Proyectos no implementada aún');
+      this.$router.push({ name: 'PPManagement' });
     }
   }
 };

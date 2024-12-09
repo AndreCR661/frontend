@@ -6,6 +6,7 @@ import IPage from '@/pages/InventarioPage.vue';
 import CPage from '@/pages/ContabilidadPage.vue';
 import AdminPage from '@/pages/AdminPage.vue';
 import UserManagement from '@/pages/vistas/GestionUsuarios.vue';
+import PPManagement from '@/pages/vistas/GestionP.vue';
 
 Vue.use(Router);
 
@@ -34,6 +35,12 @@ const routes = [
         path: '/gestion-usuarios',
         name: 'UserManagement',
         component: UserManagement,
+        meta: { requiresAuth: true, role: 'admin' } 
+    },
+    {
+        path: '/gestion-proyectos-provedores',
+        name: 'PPManagement',
+        component: PPManagement,
         meta: { requiresAuth: true, role: 'admin' } 
     },
     { path: '*', redirect: '/' }

@@ -113,9 +113,9 @@ export default {
       valid: false,
       showPassword: false,
       headers: [
-        { text: "Username", value: "username" },
+        { text: "Usuario", value: "username" },
         { text: "Email", value: "email" },
-        { text: "Role", value: "role" },
+        { text: "Rol", value: "role" },
         { text: "Acciones", value: "actions", sortable: false },
       ],
       users: [],
