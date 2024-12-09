@@ -22,7 +22,7 @@
             "symbol": "OANDA:XAUUSD",
             "width": "800",
             "height": "100",
-            "colorTheme": "light",
+            "colorTheme": "dark",
             "isTransparent": false,
             "locale": "en",
             "center": "true"
@@ -39,7 +39,7 @@
             "symbol": "OANDA:XAUUSD",
             "interval": "D",
             "timezone": "Etc/UTC",
-            "theme": "light",
+            "theme": "dark",
             "style": "1",
             "locale": "es",
             "toolbar_bg": "#f1f3f6",
